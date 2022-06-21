@@ -1,0 +1,52 @@
+criando estrutura de projeto
+
+vite para criar o app react ou react Typescript
+
+yarn add tailwindcss postcss autoprefixer -D
+
+npx tailwindcss init -p
+
+importar o css do globalStyles no root para aplicar o tailwind
+@apply antes de colocar as classes do tailwind no arquivo de css por causa do postscss
+
+
+CMS = Content Management System
+Headless CMS(GraphCMS): Painel de ADMIN (dados fornecidos atraves de uma API REST ou GraphQL
+React consome a API do CMS
+
+Api GraphQL possui 2 tipos de operações
+Query | Mutation
+Query = buscar dados da api
+mutation = criar, alterar ou deletar dados da api
+
+exemplo de Query para uma API GraphQL 
+query lessons {
+lesson {
+id
+title
+	}
+}
+
+utilizar apollo para fazer requisições para API graphQL (pode usar axios mas dificulta mais a escrita do codigo)
+
+//utilizando Apollo para fazer requisições para uma api graphQL
+// config do apollo na pasta lib/apollo.ts
+
+action que dispara a Query, variavel criada fora do component
+const GET_LESSONS_QUERY = gql`
+query {
+  lessons {
+    id
+    title
+  }
+}
+`
+//useQuery é o hook para fazer a chamada com apollo (para funcionar, deve se envolver o <App /> da root com um 
+// <ApolloProvider client={ client }> 
+	<App />
+</ApolloProvider>
+const { data } = useQuery(GET_LESSONS_QUERY)
+
+client vem da pasta lib onde foi criada a instancia do apollo
+
+
