@@ -52,3 +52,5 @@ client vem da pasta lib onde foi criada a instancia do apollo
 para criar as prorpias cores no tailwind ou mudar uma ja existente, ir no arquivo tailwind.config.js, theme: { extend: { colors: { gray: { 900: 'cor desejada' } } }
 
 display block para renderizar HTML em block (se o margin nao pegar, botar display block
+
+transition-colors, class para criar animação ao ativar o hover dos components, trocar a cor de forma mais devagar
