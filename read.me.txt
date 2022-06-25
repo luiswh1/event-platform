@@ -54,3 +54,18 @@ para criar as prorpias cores no tailwind ou mudar uma ja existente, ir no arquiv
 display block para renderizar HTML em block (se o margin nao pegar, botar display block
 
 transition-colors, class para criar animação ao ativar o hover dos components, trocar a cor de forma mais devagar
+
+em requisições graphQL os parametros devem ser declarados no inicio da função
+com o tipo iniciando com letra maiuscula ex: $name: String!, o "!" significa que o 
+parametro é obrigatorio.
+
+ //mutation roda somente quando a função do primeiro lugar do array for chamada
+  // o segundo lugar do array é os dados enviados na mutation
+
+  lib classnames para inserir css condicional de forma mais clean
+
+  @graphql-codegen é a lib para organizar as queries em uma pasta apenas 
+  e nao precisar declarar os tipos de todos os dados da query.
+
+  codegen.yml em generates vai os arquivos que serao gerados automaticos pela api graphql
+  como as interfaces do typescrip.
